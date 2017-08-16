@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>North Shore Neighbourhood</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <h1 class="header-text">North Shore Neighbourhood</h1>
+            <div class="error" data-bind="visible: foursqError">
+                <h4>Sorry.. we have a problem to load data from Foursquare, Please try again later</h4>
+            </div>
+            <div class="error" data-bind="visible: GErrorMessage">
+                <h1>Sorry.. we have a problem to laod the Google map, Please try again later</h1>
+            </div>
+        </div>
+        <button class="hamburger">&#9776;</button>
+        <button class="close">&#9776;</button>
+    </header>
+    <div class="menu">
+        <h2>Attractions</h2>
+        <hr>
+        <p>Filter:
+            <input class="filter" type="search" placeholder="Search Attractions" data-bind="textInput: SearchUserInput, event: {keyup: filterMarkers}">
+        </p>
+        <hr>
+        <div data-bind="foreach: visible">
+            <p>
+                <a href="#" data-bind="text: title, click: $parent.popInfoWindow"></a>
+            </p>
+            <hr>
+        </div>
+    </div>
+    <div id="mapDiv"></div>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="js/knockout.js"></script>
+	<script async type="text/javascript" src="js/main.js"></script>
+     <script src="js/northshorelocation.js"></script>
+	<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjqsz20X7ddDC6LDvCVUSiR5C3wMqHGJo&callback=initMap"></script>
+</body>
+
+</html>
