@@ -12,12 +12,7 @@
     <header>
         <div class="header-top">
             <h1 class="header-text">North Shore Neighbourhood</h1>
-            <div class="error" data-bind="visible: foursqError">
-                <h4>Sorry.. we have a problem to load data from Foursquare, Please try again later</h4>
-            </div>
-            <div class="error" data-bind="visible: GErrorMessage">
-                <h1>Sorry.. we have a problem to laod the Google map, Please try again later</h1>
-            </div>
+         
         </div>
         <button class="hamburger">&#9776;</button>
         <button class="close">&#9776;</button>
@@ -42,7 +37,7 @@
 	<script src="js/knockout.js"></script>
 	<script async type="text/javascript" src="js/main.js"></script>
      <script src="js/northshorelocation.js"></script>
-	<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjqsz20X7ddDC6LDvCVUSiR5C3wMqHGJo&callback=initMap"></script>
+	<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjqsz20X7ddDC6LDvCVUSiR5C3wMqHGJo&callback=initMap" onerror="GErrorMessage()"></script>
 </body>
 
 </html>
