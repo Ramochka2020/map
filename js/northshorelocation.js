@@ -58,7 +58,7 @@ var locations = [{
 },
                  {
         title: 'Grouse Mountain',
-        url: "http://bit.ly/2vy3oJs",
+        url: "www.grousemountain.com",
         lat: 49.3801, 
         lng: -123.0815,
 },
