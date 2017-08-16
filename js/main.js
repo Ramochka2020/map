@@ -1,7 +1,6 @@
 // Declare variables
 
 var map;
-var GErrorMessage = ko.observable(false);
 
 //Initialize Google map based on predefined Northshore position
 
@@ -216,6 +215,9 @@ function toggleBounce(marker) {
 
 };
 
+function GErrorMessage() {
+	alert("Sorry.. we have a problem to laod the Google map, Please try again later");
+}
 //Hamburger Menu 
 $(".close").hide();
 $(".menu").hide();
